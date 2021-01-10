@@ -1,5 +1,4 @@
-# CloudFlare's 1.1.1.1 WARP+ by Navaneeth
-Get free WARP+ GBs in CloudFlare's 1.1.1.1!!
+[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=navaneethkm004&repo=warp-plus&theme=dark)](https://github.com/navaneethkm004/warp-plus)
 
 # How to do it
   - Open the app and just connect to 1.1.1.1 (by clicking the button in the middle) if you haven't done it yet.
