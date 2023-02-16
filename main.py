@@ -6,16 +6,20 @@ import string
 import time
 import os
 import sys
-script_version = '4.0.0'
+script_version = '4.1.0'
 window_title   = f"WARP-PLUS-CLOUDFLARE By Navaneeth K M (version {script_version})"
-os.system('title ' + window_title if os.name == 'nt' else 'PS1="\[\e]0;' + window_title + '\a\]"; echo $PS1')
+os.system(
+	f'title {window_title}'
+	if os.name == 'nt'
+	else 'PS1="\[\e]0;' + window_title + '\a\]"; echo $PS1'
+)
 os.system('cls' if os.name == 'nt' else 'clear')
 print ("[+] ABOUT SCRIPT:")
-print ("[-] With this script, you can getting unlimited GB on Warp+.")
+print ("[-] With this script, you can obtain unlimited WARP+ referral data.")
 print (f"[-] Version: {script_version}")
 print ("--------")
-print ("[+] THIS SCRIPT CODDED BY Navaneeth K M") 
-print ("[-] SITE: https://navaneethkm.gq") 
+print ("[+] By Navaneeth K M")
+print ("[-] My Website: https://navaneethkm.ml")
 print ("[-] TELEGRAM: navaneethkm004")
 print ("--------")
 referrer  = input("[#] Enter the User ID:")
@@ -25,9 +29,9 @@ def progressBar():
 	save_anim     = animation[progress_anim % len(animation)]
 	percent       = 0
 	while True:
-		for i in range(10):
+		for _ in range(10):
 			percent += 1
-			sys.stdout.write(f"\r[+] Waiting response...  " + save_anim + f" {percent}%")
+			sys.stdout.write(f"\r[+] Waiting response...  {save_anim}" + f" {percent}%")
 			sys.stdout.flush()
 			time.sleep(0.075)
 		progress_anim += 1
@@ -39,27 +43,29 @@ def progressBar():
 def genString(stringLength):
 	try:
 		letters = string.ascii_letters + string.digits
-		return ''.join(random.choice(letters) for i in range(stringLength))
+		return ''.join(random.choice(letters) for _ in range(stringLength))
 	except Exception as error:
 		print(error)		    
 def digitString(stringLength):
 	try:
 		digit = string.digits
-		return ''.join((random.choice(digit) for i in range(stringLength)))    
+		return ''.join(random.choice(digit) for _ in range(stringLength))
 	except Exception as error:
 		print(error)	
 url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 def run():
 	try:
 		install_id = genString(22)
-		body = {"key": "{}=".format(genString(43)),
-				"install_id": install_id,
-				"fcm_token": "{}:APA91b{}".format(install_id, genString(134)),
-				"referrer": referrer,
-				"warp_enabled": False,
-				"tos": datetime.datetime.now().isoformat()[:-3] + "+02:00",
-				"type": "Android",
-				"locale": "es_ES"}
+		body = {
+			"key": f"{genString(43)}=",
+			"install_id": install_id,
+			"fcm_token": f"{install_id}:APA91b{genString(134)}",
+			"referrer": referrer,
+			"warp_enabled": False,
+			"tos": f"{datetime.datetime.now().isoformat()[:-3]}+02:00",
+			"type": "Android",
+			"locale": "es_ES",
+		}
 		data = json.dumps(body).encode('utf8')
 		headers = {'Content-Type': 'application/json; charset=UTF-8',
 					'Host': 'api.cloudflareclient.com',
@@ -69,8 +75,7 @@ def run():
 					}
 		req         = urllib.request.Request(url, data, headers)
 		response    = urllib.request.urlopen(req)
-		status_code = response.getcode()	
-		return status_code
+		return response.getcode()
 	except Exception as error:
 		print("")
 		print(error)	
