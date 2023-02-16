@@ -6,7 +6,7 @@ import string
 import time
 import os
 import sys
-script_version = '4.0.0'
+script_version = '4.1.0'
 window_title   = f"WARP-PLUS-CLOUDFLARE By Navaneeth K M (version {script_version})"
 os.system(
 	f'title {window_title}'
@@ -15,11 +15,11 @@ os.system(
 )
 os.system('cls' if os.name == 'nt' else 'clear')
 print ("[+] ABOUT SCRIPT:")
-print ("[-] With this script, you can getting unlimited GB on Warp+.")
+print ("[-] With this script, you can obtain unlimited WARP+ referral data.")
 print (f"[-] Version: {script_version}")
 print ("--------")
-print ("[+] THIS SCRIPT CODDED BY Navaneeth K M")
-print ("[-] SITE: https://navaneethkm.gq")
+print ("[+] By Navaneeth K M")
+print ("[-] My Website: https://navaneethkm.ml")
 print ("[-] TELEGRAM: navaneethkm004")
 print ("--------")
 referrer  = input("[#] Enter the User ID:")
