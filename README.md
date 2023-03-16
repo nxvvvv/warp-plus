@@ -1,6 +1,6 @@
-[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=navaneethkm004&repo=warp-plus&theme=dark)](https://github.com/navaneethkm004/warp-plus)<br/>
+[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=nxvvvv&repo=warp-plus&theme=dark)](https://github.com/nxvvvv/warp-plus)<br/>
 
-[![Run on Repl.it](https://repl.it/badge/github/navaneethkm004/warp-plus)](https://repl.it/github/navaneethkm004/warp-plus)
+[![Run on Repl.it](https://repl.it/badge/github/nxvvvv/warp-plus)](https://repl.it/github/nxvvvv/warp-plus)
 
 # How to do it
   - Open the app and just connect to 1.1.1.1 (by clicking the button in the middle) if you haven't done it yet.
