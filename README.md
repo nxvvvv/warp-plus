@@ -1,4 +1,5 @@
-[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=nxvvvv&repo=warp-plus&theme=dark)](https://github.com/nxvvvv/warp-plus)<br/>
+[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=nxvvvv&repo=warp-plus&theme=dark)](https://github.com/nxvvvv/warp-plus)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus?ref=badge_shield)
+<br/>
 
 [![Run on Repl.it](https://repl.it/badge/github/nxvvvv/warp-plus)](https://repl.it/github/nxvvvv/warp-plus)
 
@@ -9,3 +10,7 @@
   - Now click Diagnostics and long press the User ID and copy it.
   - Now run the program and paste the ID when asked.
   - Enjoy the free WARP+ GBs!!
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus?ref=badge_large)
