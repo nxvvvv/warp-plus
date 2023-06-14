@@ -1,6 +1,5 @@
-[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=nxvvvv&repo=warp-plus&theme=dark)](https://github.com/nxvvvv/warp-plus)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus?ref=badge_shield)
+[![warp-plus](https://github-readme-stats.vercel.app/api/pin/?username=nxvvvv&repo=warp-plus&theme=dark)](https://github.com/nxvvvv/warp-plus)
 <br/>
-
 [![Run on Repl.it](https://repl.it/badge/github/nxvvvv/warp-plus)](https://repl.it/github/nxvvvv/warp-plus)
 
 # How to do it
@@ -13,4 +12,4 @@
 
 
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus?ref=badge_small)
