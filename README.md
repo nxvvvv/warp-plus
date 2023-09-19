@@ -9,3 +9,5 @@
   - Now click Diagnostics and long press the User ID and copy it.
   - Now run the program and paste the ID when asked.
   - Enjoy the free WARP+ GBs!!
+
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus?ref=badge_small" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnxvvvv%2Fwarp-plus.svg?type=small"/></a>
