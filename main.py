@@ -15,7 +15,7 @@ except ImportError:
     import httpx
 
 # Define script version and window title
-script_version = '4.4.0'
+script_version = '4.4.1'
 window_title = f"WARP-PLUS-CLOUDFLARE (version {script_version})"
 
 # Set window title based on OS
