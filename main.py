@@ -50,26 +50,6 @@ referral_data = {
     }
 }
 
-# Function to display a progress bar
-def progressBar():
-    animation = ["[□□□□□□□□□□]", "[■□□□□□□□□□]", "[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]"]
-    progress_anim = 0
-    save_anim = animation[progress_anim % len(animation)]
-    percent = 0
-    while True:
-        for _ in range(10):
-            percent += 1
-            sys.stdout.write(f"\r[+] Waiting response...  {save_anim}" + f" {percent}%")
-            sys.stdout.flush()
-            time.sleep(0.075)
-            if stop_flag:
-                return
-        progress_anim += 1
-        save_anim = animation[progress_anim % len(animation)]
-        if percent == 100:
-            sys.stdout.write("\r[+] Request completed... [■■■■■■■■■■] 100%")
-            break
-
 # Function to generate a random string
 def genString(stringLength):
     try:
@@ -89,7 +69,7 @@ def digitString(stringLength):
 # Define the API URL
 url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 
-# Function to send a request to the API
+# Function to send a request to the API and handle the response
 def run():
     global stop_flag
     try:
@@ -111,14 +91,21 @@ def run():
             'Accept-Encoding': 'gzip',
             'User-Agent': 'okhttp/3.12.1'
         }
-        
+
         with httpx.Client() as client:
             response = client.post(url, json=body, headers=headers)
-        
-        return response.status_code
+
+        if response.status_code == 200:
+            print(f"\n[-] WORK ON ID: {referrer}")
+            print(f"[:)] Request completed successfully.")
+            return True
+        else:
+            print("[:(] Error when connecting to server.")
+            return False
     except Exception as error:
         print("")
         print(error)
+        return False
 
 # Function to start the script
 def start_script():
@@ -134,25 +121,23 @@ def start_script():
 
     while not stop_flag:
         os.system('cls' if os.name == 'nt' else 'clear')
-        sys.stdout.write("\r[+] Sending request...   [□□□□□□□□□□] 0%")
+        sys.stdout.write("\r[+] Sending request...")
         sys.stdout.flush()
         result = run()
-        if result == 200:
+        if result:
             g += 1
-            progressBar()
             if referrer in referral_data["users"]:
                 referral_data["users"][referrer][1] += 1  # Increment successful referrals
             else:
                 referral_data["users"][referrer] = [referrer, 1]  # Initialize successful referrals to 1
             referral_data["total"]["total_referrals"] += 1
             update_log_file()
-            print(f"\n[-] WORK ON ID: {referrer}")
             print(f"[:)] {g} GB has been successfully added to your account.")
             print(f"[#] Total: {g} Good {b} Bad")
             for i in range(max_interval, 0, -1):
                 sys.stdout.write(f"\r[*] After {i} seconds, a new request will be sent.")
                 sys.stdout.flush()
-                time.sleep(1)
+                time.sleep(1)  # Wait for the maximum request interval
         else:
             b += 1
             print("\n[:(] Error when connecting to server.")
@@ -160,7 +145,7 @@ def start_script():
             for i in range(min_interval, 0, -1):
                 sys.stdout.write(f"\r[*] Retrying in {i}s...")
                 sys.stdout.flush()
-                time.sleep(1)
+                time.sleep(1)  # Wait for the minimum request interval
 
 # Function to update the log file with referral data
 def update_log_file():
