@@ -97,7 +97,7 @@ def run():
 
         if response.status_code == 200:
             print(f"\n[-] WORK ON ID: {referrer}")
-            print(f"[:)] Request completed successfully.")
+            print("[:)] Request completed successfully.")
             return True
         else:
             print("[:(] Error when connecting to server.")
@@ -123,8 +123,7 @@ def start_script():
         os.system('cls' if os.name == 'nt' else 'clear')
         sys.stdout.write("\r[+] Sending request...")
         sys.stdout.flush()
-        result = run()
-        if result:
+        if result := run():
             g += 1
             if referrer in referral_data["users"]:
                 referral_data["users"][referrer][1] += 1  # Increment successful referrals
