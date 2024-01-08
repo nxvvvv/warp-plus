@@ -11,7 +11,7 @@ try:
     import httpx
 except ImportError:
     print("httpx package not found. Installing...")
-    os.system("pip install httpx")
+    os.system("poetry add 'httpx 0.26.0'")
     import httpx
 
 # Define script version and window title
